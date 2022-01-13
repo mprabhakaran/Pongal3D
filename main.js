@@ -1,4 +1,5 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
+import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js'
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff)
@@ -23,12 +24,16 @@ window.addEventListener('resize',()=>{
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth,window.innerHeight);
   
-  })
+  });
+
+const controls = new OrbitControls(camera,renderer.domElement);
+
 
 function animate(){
     requestAnimationFrame(animate);
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
+    controls.update();
     renderer.render(scene,camera)
 }
 animate();
