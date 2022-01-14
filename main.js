@@ -17,10 +17,18 @@ document.body.appendChild(renderer.domElement);
 
 //geometry
 const loader = new GLTFLoader();
-loader.load('./pongalWishes.glb',(glb)=>{
-    const root = glb.scene;
-    scene.add(root);
-});
+loader.load(
+    './pongalWishes.glb',
+    function(gltf){
+        scene.add(gltf.scene);
+    },
+    function(xhr){
+        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+    },
+    function(error){
+        console.log('A error happened');
+    }
+)
 
 
 window.addEventListener('resize',()=>{
