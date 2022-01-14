@@ -2,11 +2,23 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
 import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js'
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js'
 
-window.addEventListener('load',()=>{
-    setTimeout(()=>{
-        window.scrollTo(0,1);
-    },0);
-});
+
+
+function hideAddressBar()
+{
+  if(!window.location.hash)
+  {
+      if(document.height < window.outerHeight)
+      {
+          document.body.style.height = (window.outerHeight + 50) + 'px';
+      }
+
+      setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+  }
+}
+
+window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+window.addEventListener("orientationchange", hideAddressBar );
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#82dae0');
