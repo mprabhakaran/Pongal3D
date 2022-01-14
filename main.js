@@ -63,11 +63,6 @@ window.addEventListener('resize',()=>{
   
   });
 
-window.addEventListener('load',()=>{
-    setTimeout(()=>{
-        window.scrollTo(0,1);
-    },0);
-});
 
 const controls = new OrbitControls(camera,renderer.domElement);
 
