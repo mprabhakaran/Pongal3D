@@ -3,7 +3,7 @@ import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js'
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff)
+scene.background = new THREE.Color('#b8b1a0')
 
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,100);
 scene.add(camera);
