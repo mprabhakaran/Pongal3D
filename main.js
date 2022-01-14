@@ -10,6 +10,7 @@ scene.add(camera);
 camera.position.z = 4;
 camera.position.y = 1;
 
+//light
 const dirLight = new THREE.DirectionLight({color:0xffffff});
 scene.add(dirLight);
 
