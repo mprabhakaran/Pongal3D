@@ -7,7 +7,7 @@ scene.background = new THREE.Color('#82dae0');
 
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,100);
 scene.add(camera);
-camera.position.z = 2;
+camera.position.z = 1.5;
 
 const dirLight = new THREE.DirectionalLight({color:0xffffff});
 dirLight.position.set(0.5,1.5,2);
