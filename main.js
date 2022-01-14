@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
 import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'pongal3D/GLTFLoader';
+import { GLTFLoader } from 'https://mprabhakaran.github.io/Pongal3D/GLTFLoader';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff)
