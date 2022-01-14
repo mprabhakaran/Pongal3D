@@ -1,5 +1,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
 import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js'
+import { GLTFLoader } from './GLTFLoader';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff)
@@ -14,10 +15,13 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 
-const geometry = new THREE.BoxBufferGeometry();
-const material = new THREE.MeshBasicMaterial({color:0xff0000});
-const cube = new THREE.Mesh(geometry,material);
-scene.add(cube);
+//geometry
+const loader = new GLTFLoader();
+loader.load('./pongalWishes.glb',(gltf)=>{
+    const root = gltf.scene;
+    scene.add(root);
+});
+
 
 window.addEventListener('resize',()=>{
     camera.aspect = window.innerWidth/window.innerHeight;
