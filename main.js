@@ -35,8 +35,6 @@ const controls = new OrbitControls(camera,renderer.domElement);
 
 function animate(){
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
     controls.update();
     renderer.render(scene,camera)
 }
