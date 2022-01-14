@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
 import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'https://mprabhakaran.github.io/Pongal3D/GLTFLoader';
+import { GLTFLoader } from 'GLTFLoader';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff)
@@ -18,7 +18,7 @@ document.body.appendChild(renderer.domElement);
 //geometry
 const loader = new GLTFLoader();
 loader.load(
-    './pongalWishes.glb',
+    'pongalWishes.glb',
     function(gltf){
         scene.add(gltf.scene);
     },
