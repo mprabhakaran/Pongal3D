@@ -7,11 +7,14 @@ scene.background = new THREE.Color('#b8b1a0')
 
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,100);
 scene.add(camera);
-camera.position.z = 4;
+camera.position.z = 2;
 camera.position.y = 1;
 
 const dirLight = new THREE.DirectionalLight({color:0xffffff});
 scene.add(dirLight);
+
+const ambientLight = new THREE.AmbientLight(0xffffff,1.5);
+scene.add(ambientLight);
 
 
 const renderer = new THREE.WebGLRenderer();
