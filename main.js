@@ -2,9 +2,11 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
 import {OrbitControls} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js'
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js'
 
-window.addEventListener('click',()=>{
-    document.body.requestFullscreen();
-})
+window.addEventListener('load',()=>{
+    setTimeout(()=>{
+        window.scrollTo(0,1);
+    },0);
+});
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#82dae0');
