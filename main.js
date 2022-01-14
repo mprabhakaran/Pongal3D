@@ -7,7 +7,15 @@ window.addEventListener('click',()=>{
 });
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color('#82dae0');
+scene.background = new THREE.CubeTextureLoader()
+.load([
+    './px.png',
+    './nx.png',
+    './py.png',
+    './ny.png',
+    './pz.png',
+    './nz.png'
+]);
 
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,100);
 scene.add(camera);
