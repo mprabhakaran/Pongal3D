@@ -10,6 +10,9 @@ scene.add(camera);
 camera.position.z = 4;
 camera.position.y = 1;
 
+const dirLight = new THREE.DirectionLight({color:0xffffff});
+scene.add(dirLight);
+
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
