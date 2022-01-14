@@ -17,8 +17,8 @@ document.body.appendChild(renderer.domElement);
 
 //geometry
 const loader = new GLTFLoader();
-loader.load('./pongalWishes.glb',(gltf)=>{
-    const root = gltf.scene;
+loader.load('./pongalWishes.glb',(glb)=>{
+    const root = glb.scene;
     scene.add(root);
 });
 
